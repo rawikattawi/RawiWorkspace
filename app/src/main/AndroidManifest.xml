@@ -19,7 +19,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".MyDogList" />
         <activity android:name=".MyDogList" />
-        <activity android:name=".DogProfile"></activity>
+        <activity android:name=".DogProfile" />
+        <activity android:name=".DogDetailsActivity"></activity>
     </application>
 
 </manifest>

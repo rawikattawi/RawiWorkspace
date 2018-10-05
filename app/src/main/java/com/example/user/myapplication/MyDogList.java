@@ -12,7 +12,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class MyDogList extends AppCompatActivity implements AdapterView.OnItemClickListener{
-    ListView lvCountries;
+    ListView lvDogs;
     ArrayAdapter<String> arrayAdapter;
     ArrayList<String> arrayList = new ArrayList<>();
 
@@ -20,7 +20,7 @@ public class MyDogList extends AppCompatActivity implements AdapterView.OnItemCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
-        lvCountries = (ListView)  findViewById(R.id.lvCountries);
+        lvDogs = (ListView)  findViewById(R.id.lvDogs);
         arrayList.add("My Dogs");
         arrayList.add("?");
         arrayList.add("About Application");
@@ -28,7 +28,7 @@ public class MyDogList extends AppCompatActivity implements AdapterView.OnItemCl
 
 
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arrayList);
-        lvCountries.setAdapter(arrayAdapter);
+        lvDogs.setAdapter(arrayAdapter);
     }
 
     @Override

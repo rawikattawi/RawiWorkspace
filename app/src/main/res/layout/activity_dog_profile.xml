@@ -8,47 +8,67 @@
     tools:context=".DogProfile">
 
     <EditText
-        android:id="@+id/Dog Name"
+        android:id="@+id/etDogName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Dog Name" />
+        android:hint="Dog Name"
+        android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/Age"
+        android:id="@+id/etDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Age" />
+        android:hint="Date"
+        android:inputType="textPersonName|date" />
 
     <EditText
-        android:id="@+id/wieght"
+        android:id="@+id/etWieght"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="wieght" />
+        android:hint="weight"
+        android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/photos"
+        android:id="@+id/etTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="photos" />
+        android:hint="Time"
+        android:inputType="time" />
 
-    <EditText
-        android:id="@+id/Timer"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
+        android:layout_weight="1"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Camera" />
+
+        <Button
+            android:id="@+id/btGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gallery" />
+    </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="Add" />
 </LinearLayout>
