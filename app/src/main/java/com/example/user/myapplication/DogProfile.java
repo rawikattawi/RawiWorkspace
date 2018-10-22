@@ -1,6 +1,7 @@
 package com.example.user.myapplication;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,12 +38,21 @@ public class DogProfile extends AppCompatActivity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         //אם המשתמש לחץ על כפתור ה- add
-        if(v == btAdd){
+        if(v == btAdd) {
             String name = etDogName.getText().toString();
-            if(v == btCamera){
-                String name = etDogName.getText().toString();
-                if(v == btGallery){
-                    String name = etDogName.getText().toString();
+
+          //  String name = etDogName.getText().toString();
+
+
+            Intent i = new Intent(this, MyDogList.class);
+            startActivity(i);
+        }
+        if(v == btCamera) {
+
+        }
+        if(v == btGallery) {
+
         }
     }
 }
+

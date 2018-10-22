@@ -5,26 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
-
-    <Button
-        android:id="@+id/btMyDogs"
+    <EditText
+        android:id="@+id/etUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="My Dogs" />
+        android:ems="10"
+        android:hint="UserName"
+        android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/btId"
+    <EditText
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:ems="10"
+        android:hint="Passowrd"
+        android:inputType="textPersonName" />
 
     <Button
-        android:id="@+id/btAboutAplication"
+        android:id="@+id/btLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="About aplication" />
-
-
+        android:text="Log in" />
 </LinearLayout>

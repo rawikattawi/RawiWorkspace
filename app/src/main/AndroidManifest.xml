@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AlertDidogActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,9 +18,8 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".MyDogList" />
-        <activity android:name=".MyDogList" />
         <activity android:name=".DogProfile" />
-        <activity android:name=".DogDetailsActivity"></activity>
+        <activity android:name=".DogDetailsActivity" />
     </application>
 
 </manifest>
