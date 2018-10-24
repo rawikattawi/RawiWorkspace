@@ -101,7 +101,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(LoginActivity.this, "User Or Password Empty.",
                     Toast.LENGTH_SHORT).show();
         }else{
-            signIn(etUserName.getText().toString(), etPassword.getText().toString());
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+           // signIn(etUserName.getText().toString(), etPassword.getText().toString());
         }
     }
 }

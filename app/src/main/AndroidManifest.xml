@@ -20,6 +20,8 @@
         <activity android:name=".MyDogList" />
         <activity android:name=".DogProfile" />
         <activity android:name=".DogDetailsActivity" />
+        <activity android:name=".CameraGalleryActivity" />
+        <activity android:name=".AboutAplication"></activity>
     </application>
 
 </manifest>

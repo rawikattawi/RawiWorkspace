@@ -1,6 +1,5 @@
 package com.example.user.myapplication;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +9,7 @@ import android.widget.EditText;
 
 public class DogProfile extends AppCompatActivity implements View.OnClickListener{
     //1.
-    EditText etDogName ,etDate ,etWieght, etTime ;
+    EditText etDogName ,etDate , etWeight, etTime ;
     Button btAdd, btCamera, btGallery;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +19,7 @@ public class DogProfile extends AppCompatActivity implements View.OnClickListene
         //2.
         etDogName = findViewById(R.id.etDogName);
         etDate = findViewById(R.id.etDate);
-        etWieght = findViewById(R.id.etWieght);
+        etWeight = findViewById(R.id.etWieght);
         etTime = findViewById(R.id.etTime);
 
         btAdd = findViewById(R.id.btAdd);
