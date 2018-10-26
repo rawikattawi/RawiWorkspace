@@ -2,6 +2,7 @@ package com.example.user.myapplication;
 
 import android.content.ClipData;
 import android.content.Context;
+import android.content.Intent;
 import android.media.Image;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
@@ -37,6 +38,15 @@ public class CustomAdapter extends ArrayAdapter<Item>{
 
             ImageView imageView = (ImageView) V.findViewById(R.id.imageView);
             imageView.setImageResource(p.getImage());
+
+            Button btEdit = V.findViewById(R.id.btEdit);
+            btEdit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i = new Intent(mContext, DogProfile.class);
+                    mContext.startActivity(i);
+                }
+            });
 
         }
         return V;
