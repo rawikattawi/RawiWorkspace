@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //    lvCategory = (ListView)  findViewById(R.id.lvCategory);
 
         arrayList.add(new Item(R.id.imageView,"My Dogs"));
-        arrayList.add(new Item(R.id.imageView,"?"));
         arrayList.add(new Item(R.id.imageView,"About Aplication"));
 
 
@@ -38,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         arrayList.get(position);
         if(position == 0){
            Intent i = new Intent(this, MyDogList.class);
+            startActivity(i);
+
+        }else{
+            Intent i = new Intent(this, AboutAplication.class);
             startActivity(i);
         }
     }

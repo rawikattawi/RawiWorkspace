@@ -1,16 +1,23 @@
 package com.example.user.myapplication;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 public class DogProfile extends AppCompatActivity implements View.OnClickListener{
+    private static final int CAMERA_REQUEST = 0;
     //1.
     EditText etDogName ,etDate , etWeight, etTime ;
     Button btAdd, btCamera, btGallery;
+    ImageView imageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,26 +38,32 @@ public class DogProfile extends AppCompatActivity implements View.OnClickListene
         btGallery = findViewById(R.id.btGallery);
         btGallery.setOnClickListener(this);
 
+        imageView = findViewById(R.id.imageView);
+
+
     }
+
 
 
     @Override
     public void onClick(View v) {
-        //אם המשתמש לחץ על כפתור ה- add
         if(v == btAdd) {
-            String name = etDogName.getText().toString();
-
-          //  String name = etDogName.getText().toString();
-
 
             Intent i = new Intent(this, MyDogList.class);
             startActivity(i);
         }
-        if(v == btCamera) {
+        else if (v == btCamera) {
+            Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(i, CAMERA_REQUEST);
+
+        } else {
 
         }
-        if(v == btGallery) {
-
+    }
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK){
+            Bitmap photo = (Bitmap) data.getExtras().get("data");
+            imageView.setImageBitmap(photo);
         }
     }
 }

@@ -15,12 +15,6 @@
         android:text="My Dogs" />
 
     <Button
-        android:id="@+id/btId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <Button
         android:id="@+id/btAboutAplication"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
