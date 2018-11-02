@@ -6,42 +6,38 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
-    ListView lvCategory;
-    ArrayAdapter<Item> arrayAdapter;
-    ArrayList<Item> arrayList = new ArrayList<>();
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Button btMyDogs, btAboutApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    //    lvCategory = (ListView)  findViewById(R.id.lvCategory);
+        btMyDogs = (Button) findViewById(R.id.btMyDogs);
+        btAboutApp = (Button) findViewById(R.id.btAboutApp);
 
-        arrayList.add(new Item(R.id.imageView,"My Dogs"));
-        arrayList.add(new Item(R.id.imageView,"About Aplication"));
-
-
-
-
-
-        arrayAdapter = new ArrayAdapter<Item>(this, android.R.layout.simple_list_item_1, arrayList);
-        lvCategory.setAdapter(arrayAdapter);
+        btMyDogs.setOnClickListener(this);
+        btAboutApp.setOnClickListener(this);
     }
+
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        arrayList.get(position);
-        if(position == 0){
-           Intent i = new Intent(this, MyDogList.class);
-            startActivity(i);
-
-        }else{
-            Intent i = new Intent(this, AboutAplication.class);
+    public void onClick(View v) {
+        if(v==btMyDogs){
+            Intent i = new Intent(this, MyDogList.class);
             startActivity(i);
         }
+        if(v==btAboutApp){
+            Intent i = new Intent(this,AboutAplication.class);
+            startActivity(i);
+        }
+
+
     }
 }
+
