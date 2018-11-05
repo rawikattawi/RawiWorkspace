@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".FireActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,10 +19,10 @@
         <activity android:name=".CameraGalleryActivity" />
         <activity android:name=".MyDogList" />
         <activity android:name=".MainActivity" />
-
         <activity android:name=".DogDetailsActivity" />
         <activity android:name=".DogProfile" />
-        <activity android:name=".AboutAplication"></activity>
+        <activity android:name=".AboutAplication" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
